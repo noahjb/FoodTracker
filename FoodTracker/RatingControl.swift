@@ -26,7 +26,7 @@ class RatingControl: UIView {
         let emptyStarImage = UIImage(named: "emptyStar")
         let filledStarImage = UIImage(named: "filledStar")
         
-        for _ in 0..<5 {
+        for _ in 0..<stars {
             let button = UIButton()
             
             button.setImage(emptyStarImage, forState: .Normal)
@@ -48,7 +48,7 @@ class RatingControl: UIView {
         
         // Offset each button's origin by the size of the button plus spacing
         for (index, button) in ratingButtons.enumerate() {
-            buttonFrame.origin.x = CGFloat(index * (buttonSize + 5))
+            buttonFrame.origin.x = CGFloat(index * (buttonSize + spacing))
             button.frame = buttonFrame
         }
         
